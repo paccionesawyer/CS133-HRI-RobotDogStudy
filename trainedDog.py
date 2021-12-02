@@ -1,5 +1,7 @@
 import subprocess
 import time
+import adafruit_vl53l0x
+import RPi.GPIO as GPIO
 
 #Connect to Spike
 ser = serial.Serial(
@@ -22,11 +24,14 @@ def runStand():
 def runCome():
     ser.write('m1.pwm(30)\r\n'.encode())
     ser.write('m2.pwm(-30)\r\n'.encode())
-    lidarReading = 
-    while (lidar)
-
+    lidarReading = vl53.range
+    while (lidarReading < 20):
+        time.sleep(.1)
+        lidarReading = vl53.range
 
 def runSpin():
+    ser.write('m1.pwm(50)\r\n'.encode())
+    ser.write('m2.pwm(-10)\r\n'.encode())
 
 
 output = subprocess.run(['python3', 'listen.py'], capture_output=True)
