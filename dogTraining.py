@@ -6,6 +6,16 @@ Authors: Sawyer Paccione,
 Description: TODO
 '''
 
+#Connect to Spike
+ser = serial.Serial(
+    port='/dev/ttyACM0',
+    baudrate=115200,
+    parity=serial.PARITY_NONE,
+    stopbits=serial.STOPBITS_ONE,
+    bytesize=serial.EIGHTBITS,
+    timeout=1
+)
+
 class RobotDog:
     def __init__(self):
 
@@ -34,21 +44,41 @@ class RobotDog:
 
             self.weightDict[word] = weightList
             
+    def listen(self):
+        output = subprocess.run(['python3', 'listen.py'], capture_output=True)
+        ready = output.stdout.decode('ascii')
+        readyList = ready.split("\n")
+        if "sit" in readyList:
+            return "sit"
+        elif "stand" in readyList:
+            return "stand"
+        elif "come" in readyList:
+            return "come"
+        elif "spin" in readyList:
+            return "spin"
 
     def sit(self):
-        # Todo
+        ser.write('m3.run_to_position(90)\r\n'.encode())
+        ser.write('m4.run_to_position(-90)\r\n'.encode())
         pass
 
     def stand(self):
-        # Todo
+        ser.write('m3.run_to_position(0)\r\n'.encode())
+        ser.write('m4.run_to_position(0)\r\n'.encode())
         pass
 
     def come(self):
-        # Todo
+        ser.write('m1.pwm(30)\r\n'.encode())
+        ser.write('m2.pwm(-30)\r\n'.encode())
+        lidarReading = vl53.range
+        while (lidarReading < 20):
+            time.sleep(.1)
+            lidarReading = vl53.range
         pass
 
     def spin(self):
-        # Todo
+        ser.write('m1.pwm(50)\r\n'.encode())
+        ser.write('m2.pwm(-10)\r\n'.encode())
         pass
 
 
