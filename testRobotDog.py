@@ -1,5 +1,5 @@
 import unittest
-from dogTraining import RobotDog
+from DogTraining import RobotDog
 
 dog = RobotDog()
 
