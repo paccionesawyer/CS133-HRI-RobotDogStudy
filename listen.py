@@ -23,9 +23,9 @@ with sr.Microphone() as source:
             decodedText = "Decoded Text : {}".format(text)
             decodedText = decodedText.lower()
             words = decodedText.split(" ")
-            if "sit" in words:
-                print("sit")
-                breaks
+            if "down" in words:
+                print("down")
+                break
             elif "stand" in words:
                 print("stand")
                 break

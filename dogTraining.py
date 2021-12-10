@@ -6,7 +6,6 @@ Authors: Sawyer Paccione,
 Description: TODO
 '''
 
-
 from os import name
 import serial
 import time
@@ -16,13 +15,13 @@ import random
 class RobotDog:
     def __init__(self):
 
-        self.wordBank   = ['sit', 'stand', 'come', 'spin']
+        self.wordBank   = ['down', 'come', 'spin']
         self.weightDict = {}
 
         self.lastAction = None # a string in wordBank
 
         for word in self.wordBank:
-            self.weightDict[word] = [0.25, 0.25, 0.25, 0.25]
+            self.weightDict[word] = [0.33, 0.33, 0.33]
 
         self.updateWeight = 0.05
 
@@ -37,13 +36,20 @@ class RobotDog:
 
         self.ser.write('\x03\r\n'.encode())
         self.ser.write('import hub\r\n'.encode())
-        self.ser.write('m1 = hub.port.A.motor\r\n'.encode())
-        self.ser.write('m2 = hub.port.B.motor\r\n'.encode())
-        self.ser.write('m3 = hub.port.C.motor\r\n'.encode())
-        self.ser.write('m4 = hub.port.D.motor\r\n'.encode())
+        self.ser.write('m1 = hub.port.F.motor\r\n'.encode())
+        self.ser.write('m2 = hub.port.E.motor\r\n'.encode())
+        self.ser.write('m3 = hub.port.D.motor\r\n'.encode())
+        self.ser.write('m4 = hub.port.C.motor\r\n'.encode())
+
+        self.ser.write('m1.pwm(0)\r\n'.encode())
+        self.ser.write('m2.pwm(0)\r\n'.encode())
+        self.ser.write('m3.pwm(0)\r\n'.encode())
+        self.ser.write('m4.pwm(0)\r\n'.encode())
+        # print("here")
         
-        self.ser.write('hub.sound.beep()\r\n'.encode())
-        
+        # self.ser.write('hub.sound.beep()\r\n'.encode())
+
+        time.sleep(2)
 
     def setupSerial(self):
         '''
@@ -52,22 +58,21 @@ class RobotDog:
         print("Setup Serial")
         # Connect to Spike
         self.ser = serial.Serial(
-        port='/dev/ttyACM0',
-        baudrate=115200,
-        parity=serial.PARITY_NONE,
-        stopbits=serial.STOPBITS_ONE,
-        bytesize=serial.EIGHTBITS,
-        timeout=1
+            port='/dev/ttyACM0',
+            baudrate=115200,
+            parity=serial.PARITY_NONE,
+            stopbits=serial.STOPBITS_ONE,
+            bytesize=serial.EIGHTBITS,
+            timeout=1
         )
 
     def selfTrain(self):
         '''
         Set the weights for each word to the perfectly trained states
         '''
-        self.weightDict['sit'] = [1,0,0,0]
-        self.weightDict['stand'] = [0,1,0,0]
-        self.weightDict['come'] = [0,0,1,0]
-        self.weightDict['spin'] = [0,0,0,1]
+        self.weightDict['down'] = [1,0,0]
+        self.weightDict['come'] = [0,1,0]
+        self.weightDict['spin'] = [0,0,1]
 
     def updateWeights(self, word, action, good):
         '''
@@ -89,6 +94,11 @@ class RobotDog:
                 else :
                     weightList[index] -= (self.updateWeight / 3) * good
 
+                if weightList[index] < 0:
+                    weightList[index] = 0
+                elif weightList[index] > 1:
+                    weightList[index] = 1
+
             self.weightDict[word] = weightList
 
         print("New Weights", weightList)
@@ -102,12 +112,9 @@ class RobotDog:
         randNum = random.random()
 
         if randNum < weightList[0]:
-            self.sit()
-            return "sit"
+            self.down()
+            return "down"
         elif randNum < weightList[0] + weightList[1]:
-            self.stand()
-            return "stand"
-        elif randNum < weightList[0] + weightList[1] + weightList[2]:
             self.come()
             return "come"
         elif randNum < 1:
@@ -115,55 +122,72 @@ class RobotDog:
             return "spin"
 
         return 'confused'
-            
 
     def checkPraised(self):
         '''
         Call a file on the SPIKE that waits five seconds to get a press on the force sensor
         '''
-        return True
+        self.ser.write('\x03\r\n'.encode())
 
-            
-    def listen(self):
+        self.ser.read(1000)
+
+        self.ser.write('exec(open("awaitPraise.py").read())\r\n'.encode())
+        line = ''
+
+        while ("True" not in line) and "False" not in line:
+            line = self.ser.readline().decode('utf-8')
+            # print("Line:", line)
+            # print("True" not in line)
+            time.sleep(0.1)
+
+        self.stand()
+
+        time.sleep(2)
         
-        print("Listening")
+        if "True" in line:
+            return True
+        else:
+            return False
+
+    def listen(self):
+        self.ser.write('hub.sound.beep()\r\n'.encode())
         output = subprocess.run(['python3', 'listen.py'], capture_output=True)
         ready = output.stdout.decode('ascii')
         readyList = ready.split("\n")
+        print("Listening")
 
-        if "sit" in readyList:
-            return "sit"
-        elif "stand" in readyList:
-            return "stand"
+        if "down" in readyList:
+            return "down"
         elif "come" in readyList:
             return "come"
         elif "spin" in readyList:
             return "spin"
 
-    def sit(self):
-        print("Executing: sit")
-        # self.ser.write('m3.run_to_position(90)\r\n'.encode())
-        # self.ser.write('m4.run_to_position(-90)\r\n'.encode())
+    def down(self):
+        # print("Executing: down")
+        self.ser.write('m3.run_to_position(90, 60)\r\n'.encode())
+        self.ser.write('m4.run_to_position(-90, 60)\r\n'.encode())
 
     def stand(self):
-        print("Executing: stand")
-        # self.ser.write('m3.run_to_position(0)\r\n'.encode())
-        # self.ser.write('m4.run_to_position(0)\r\n'.encode())
+        # print("Executing: stand")
+        self.ser.write('m3.run_to_position(0, 70)\r\n'.encode())
+        self.ser.write('m4.run_to_position(0, 70)\r\n'.encode())
 
     def come(self):
-        print("Executing: come")
-        # self.ser.write('m1.pwm(30)\r\n'.encode())
-        # self.ser.write('m2.pwm(-30)\r\n'.encode())
-        # lidarReading = vl53.range
-        # while (lidarReading < 20):
-        #     time.sleep(.1)
-        #     lidarReading = vl53.range
+        self.stand()
+        time.sleep(1)
+        self.ser.write('exec(open("come.py").read())\r\n'.encode())
 
     def spin(self):
-        print("Executing: spin")
-        # self.ser.write('m1.pwm(50)\r\n'.encode())
-        # self.ser.write('m2.pwm(-10)\r\n'.encode())
-
+        # print("Executing: spin")
+        self.stand()
+        time.sleep(1)
+        self.ser.write('m1.pwm(50)\r\n'.encode())
+        self.ser.write('m2.pwm(50)\r\n'.encode())
+        time.sleep(2.8)
+        
+        self.ser.write('m1.pwm(0)\r\n'.encode())
+        self.ser.write('m2.pwm(0)\r\n'.encode())
 
 if __name__ == '__main__':
     try:
