@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="546"
+   height="329.79218"
+   aria-label="A chart."
+   style="overflow:hidden"
+   version="1.1"
+   id="svg173"
+   sodipodi:docname="linkertSurveyQuestions.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata177">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1500"
+     inkscape:window-height="978"
+     id="namedview175"
+     showgrid="false"
+     inkscape:zoom="1.2798633"
+     inkscape:cx="267.34304"
+     inkscape:cy="160.33063"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg173"
+     inkscape:document-rotation="0" />
+  <defs
+     id="_ABSTRACT_RENDERER_ID_44">
+    <clipPath
+       id="_ABSTRACT_RENDERER_ID_45">
+      <rect
+         x="115"
+         y="75"
+         width="371"
+         height="241"
+         id="rect2" />
+    </clipPath>
+    <filter
+       id="_ABSTRACT_RENDERER_ID_46">
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="2"
+         id="feGaussianBlur5" />
+      <feOffset
+         dx="1"
+         dy="1"
+         id="feOffset7" />
+      <feComponentTransfer
+         id="feComponentTransfer11">
+        <feFuncA
+           type="linear"
+           slope="0.1"
+           id="feFuncA9" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge17">
+        <feMergeNode
+           id="feMergeNode13" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode15" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g
+     id="g197">
+    <g
+       id="g27"
+       transform="translate(-41,-41)">
+      <text
+         text-anchor="start"
+         x="115"
+         y="52.049999"
+         font-family="Arial"
+         font-size="13px"
+         font-weight="bold"
+         stroke="none"
+         stroke-width="0"
+         fill="#000000"
+         id="text23"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
+           id="tspan179">Linkert Survey Question Results</tspan></text>
+      <rect
+         x="115"
+         y="41"
+         width="371"
+         height="13"
+         stroke="none"
+         stroke-width="0"
+         fill-opacity="0"
+         fill="#ffffff"
+         id="rect25" />
+    </g>
+    <g
+       id="g51"
+       transform="translate(-41,-41)">
+      <rect
+         x="499"
+         y="75"
+         width="88"
+         height="34"
+         stroke="none"
+         stroke-width="0"
+         fill-opacity="0"
+         fill="#ffffff"
+         id="rect29" />
+      <g
+         id="g39">
+        <rect
+           x="499"
+           y="75"
+           width="88"
+           height="13"
+           stroke="none"
+           stroke-width="0"
+           fill-opacity="0"
+           fill="#ffffff"
+           id="rect31" />
+        <g
+           id="g35">
+          <text
+             text-anchor="start"
+             x="530"
+             y="86.050003"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#222222"
+             id="text33"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
+               id="tspan322">Prime</tspan></text>
+        </g>
+        <rect
+           x="499"
+           y="75"
+           width="26"
+           height="13"
+           stroke="none"
+           stroke-width="0"
+           fill="#33ccc2"
+           id="rect37" />
+      </g>
+      <g
+         id="g49">
+        <rect
+           x="499"
+           y="96"
+           width="88"
+           height="13"
+           stroke="none"
+           stroke-width="0"
+           fill-opacity="0"
+           fill="#ffffff"
+           id="rect41" />
+        <g
+           id="g45">
+          <text
+             text-anchor="start"
+             x="530"
+             y="107.05"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#222222"
+             id="text43"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
+               id="tspan324">Spike</tspan></text>
+        </g>
+        <rect
+           x="499"
+           y="96"
+           width="26"
+           height="13"
+           stroke="none"
+           stroke-width="0"
+           fill="#c612de"
+           id="rect47" />
+      </g>
+    </g>
+    <g
+       id="g155"
+       transform="translate(-41,-41)">
+      <rect
+         x="115"
+         y="75"
+         width="371"
+         height="241"
+         stroke="none"
+         stroke-width="0"
+         fill-opacity="0"
+         fill="#ffffff"
+         id="rect53" />
+      <g
+         clip-path="url(https://www.rapidtables.com/tools/bar-graph.html#_ABSTRACT_RENDERER_ID_45)"
+         id="g105">
+        <g
+           id="g77">
+          <rect
+             x="115"
+             y="315"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#cccccc"
+             id="rect55" />
+          <rect
+             x="115"
+             y="267"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#cccccc"
+             id="rect57" />
+          <rect
+             x="115"
+             y="219"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#cccccc"
+             id="rect59" />
+          <rect
+             x="115"
+             y="171"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#cccccc"
+             id="rect61" />
+          <rect
+             x="115"
+             y="123"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#cccccc"
+             id="rect63" />
+          <rect
+             x="115"
+             y="75"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#cccccc"
+             id="rect65" />
+          <rect
+             x="115"
+             y="291"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#ebebeb"
+             id="rect67" />
+          <rect
+             x="115"
+             y="243"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#ebebeb"
+             id="rect69" />
+          <rect
+             x="115"
+             y="195"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#ebebeb"
+             id="rect71" />
+          <rect
+             x="115"
+             y="147"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#ebebeb"
+             id="rect73" />
+          <rect
+             x="115"
+             y="99"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#ebebeb"
+             id="rect75" />
+        </g>
+        <g
+           id="g99">
+          <rect
+             x="130"
+             y="115"
+             width="22"
+             height="200"
+             stroke="none"
+             stroke-width="0"
+             fill="#33ccc2"
+             id="rect79" />
+          <rect
+             x="204"
+             y="111"
+             width="22"
+             height="204"
+             stroke="none"
+             stroke-width="0"
+             fill="#33ccc2"
+             id="rect81" />
+          <rect
+             x="278"
+             y="181"
+             width="22"
+             height="134"
+             stroke="none"
+             stroke-width="0"
+             fill="#33ccc2"
+             id="rect83" />
+          <rect
+             x="352"
+             y="137"
+             width="22"
+             height="178"
+             stroke="none"
+             stroke-width="0"
+             fill="#33ccc2"
+             id="rect85" />
+          <rect
+             x="426"
+             y="181"
+             width="22"
+             height="134"
+             stroke="none"
+             stroke-width="0"
+             fill="#33ccc2"
+             id="rect87" />
+          <rect
+             x="153"
+             y="111"
+             width="22"
+             height="204"
+             stroke="none"
+             stroke-width="0"
+             fill="#c612de"
+             id="rect89" />
+          <rect
+             x="227"
+             y="150"
+             width="22"
+             height="165"
+             stroke="none"
+             stroke-width="0"
+             fill="#c612de"
+             id="rect91" />
+          <rect
+             x="301"
+             y="163"
+             width="22"
+             height="152"
+             stroke="none"
+             stroke-width="0"
+             fill="#c612de"
+             id="rect93" />
+          <rect
+             x="375"
+             y="146"
+             width="22"
+             height="169"
+             stroke="none"
+             stroke-width="0"
+             fill="#c612de"
+             id="rect95" />
+          <rect
+             x="449"
+             y="207"
+             width="22"
+             height="108"
+             stroke="none"
+             stroke-width="0"
+             fill="#c612de"
+             id="rect97" />
+        </g>
+        <g
+           id="g103">
+          <rect
+             x="115"
+             y="315"
+             width="371"
+             height="1"
+             stroke="none"
+             stroke-width="0"
+             fill="#333333"
+             id="rect101" />
+        </g>
+      </g>
+      <g
+         id="g107" />
+      <g
+         id="g153">
+        <g
+           id="g111">
+          <text
+             text-anchor="middle"
+             x="152.5"
+             y="335.04999"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#222222"
+             id="text109"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman'"
+               id="tspan203">Q1</tspan></text>
+        </g>
+        <g
+           id="g115">
+          <text
+             text-anchor="middle"
+             x="226.5"
+             y="335.04999"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#222222"
+             id="text113"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
+               id="tspan316">Q2</tspan></text>
+        </g>
+        <g
+           id="g119">
+          <text
+             text-anchor="middle"
+             x="300.5"
+             y="335.04999"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#222222"
+             id="text117"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
+               id="tspan314">Q3</tspan></text>
+        </g>
+        <g
+           id="g123">
+          <text
+             text-anchor="middle"
+             x="374.5"
+             y="335.04999"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#222222"
+             id="text121"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
+               id="tspan318">Q4</tspan></text>
+        </g>
+        <g
+           id="g127">
+          <text
+             text-anchor="middle"
+             x="448.5"
+             y="335.04999"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#222222"
+             id="text125"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
+               id="tspan320">Q5</tspan></text>
+        </g>
+        <g
+           id="g131">
+          <text
+             text-anchor="end"
+             x="102"
+             y="320.04999"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#444444"
+             id="text129"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman'"
+               id="tspan201">0</tspan></text>
+        </g>
+        <g
+           id="g135">
+          <text
+             text-anchor="end"
+             x="102"
+             y="272.04999"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#444444"
+             id="text133"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman'"
+               id="tspan199">1</tspan></text>
+        </g>
+        <g
+           id="g139">
+          <text
+             text-anchor="end"
+             x="102"
+             y="224.05"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#444444"
+             id="text137"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman'"
+               id="tspan197">2</tspan></text>
+        </g>
+        <g
+           id="g143">
+          <text
+             text-anchor="end"
+             x="102"
+             y="176.05"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#444444"
+             id="text141"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman'"
+               id="tspan195">3</tspan></text>
+        </g>
+        <g
+           id="g147">
+          <text
+             text-anchor="end"
+             x="102"
+             y="128.05"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#444444"
+             id="text145"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman'"
+               id="tspan193">4</tspan></text>
+        </g>
+        <g
+           id="g151">
+          <text
+             text-anchor="end"
+             x="102"
+             y="80.050003"
+             font-family="Arial"
+             font-size="13px"
+             stroke="none"
+             stroke-width="0"
+             fill="#444444"
+             id="text149"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman'"
+               id="tspan191">5</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g169"
+       transform="translate(-41,-41)">
+      <g
+         id="g161">
+        <text
+           text-anchor="middle"
+           x="300.5"
+           y="368.04999"
+           font-family="Arial"
+           font-size="13px"
+           font-style="italic"
+           stroke="none"
+           stroke-width="0"
+           fill="#222222"
+           id="text157"><tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman'"
+             id="tspan183">Question</tspan></text>
+        <rect
+           x="115"
+           y="357"
+           width="371"
+           height="13"
+           stroke="none"
+           stroke-width="0"
+           fill-opacity="0"
+           fill="#ffffff"
+           id="rect159" />
+      </g>
+      <g
+         id="g167">
+        <text
+           text-anchor="middle"
+           x="52.049999"
+           y="195.5"
+           font-family="Arial"
+           font-size="13px"
+           font-style="italic"
+           transform="rotate(-90,52.05,195.5)"
+           stroke="none"
+           stroke-width="0"
+           fill="#222222"
+           id="text163"><tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman'"
+             id="tspan181">Scale 1 - 5</tspan></text>
+        <path
+           d="M 41,316 V 75 h 13 v 241 z"
+           stroke="none"
+           stroke-width="0"
+           fill-opacity="0"
+           fill="#ffffff"
+           id="path165" />
+      </g>
+    </g>
+  </g>
+  <g
+     id="g171"
+     transform="translate(-41,-41)" />
+</svg>
