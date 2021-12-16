@@ -1,6 +1,6 @@
 
 
-from DogTraining import RobotDog
+from dogTraining import RobotDog
 
 if __name__ == '__main__':
     spike = RobotDog()

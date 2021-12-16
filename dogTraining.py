@@ -1,9 +1,10 @@
 '''
 dogTraining.py
 Date Created: 12/01/21 
-Last Edited: 12/01/21
-Authors: Sawyer Paccione, 
-Description: TODO
+Last Edited: 12/16/21
+Authors: Sawyer Paccione
+Description: A simple reinforcement learning algorithms that uses user's speech as input and 
+             user's touch as feedback
 '''
 
 from os import name
