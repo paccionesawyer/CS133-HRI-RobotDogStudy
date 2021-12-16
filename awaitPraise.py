@@ -9,13 +9,11 @@ force = 0
 
 goodboy = False
 
-while ((curr_time - start_time) < 10000):
-    # print(curr_time - start_time)
+while ((curr_time - start_time) < 5000):
     ForceSensor.mode(4)        # Force in RAW units
     force = ForceSensor.get()[0]
     curr_time = utime.ticks_ms()
-    # print(force)
-    if force > 500:
+    if force >= 500:
         goodboy = True
         break
 
@@ -24,4 +22,4 @@ if goodboy:
 else:
     print("False")
 
-hub.sound.beep()    
+# hub.sound.beep()    

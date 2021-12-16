@@ -165,13 +165,13 @@ class RobotDog:
 
     def down(self):
         # print("Executing: down")
-        self.ser.write('m3.run_to_position(90, 60)\r\n'.encode())
-        self.ser.write('m4.run_to_position(-90, 60)\r\n'.encode())
+        self.ser.write('m3.run_to_position(110, 70)\r\n'.encode())
+        self.ser.write('m4.run_to_position(-110, 70)\r\n'.encode())
 
     def stand(self):
         # print("Executing: stand")
-        self.ser.write('m3.run_to_position(0, 70)\r\n'.encode())
-        self.ser.write('m4.run_to_position(0, 70)\r\n'.encode())
+        self.ser.write('m3.run_to_position(20, 70)\r\n'.encode())
+        self.ser.write('m4.run_to_position(-20, 70)\r\n'.encode())
 
     def come(self):
         self.stand()
